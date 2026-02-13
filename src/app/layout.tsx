@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Local Leader | SEO for Home Services & Trades",
   description:
-    "Get found by local customers. First page Google rankings, Google Maps visibility, and reputation management for trades and home service businesses. From $125/week.",
+    "Become the #1 service provider in your area. First page Google rankings, Google Maps visibility, and reputation management for trades and home service businesses.",
   keywords: [
     "SEO for tradies",
     "local SEO",
