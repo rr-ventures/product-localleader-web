@@ -1,16 +1,11 @@
-import Link from "next/link";
+import Link from "next/link"
 
 const versions = [
-  { letter: "A", ready: false },
-  { letter: "B", ready: false },
-  { letter: "C", ready: false },
-  { letter: "D", ready: false },
-  { letter: "E", ready: false },
-  { letter: "F", ready: false },
-  { letter: "G", ready: false },
-  { letter: "H", ready: false },
-  { letter: "I", ready: false },
-];
+  { letter: "A", path: "/version-a", ready: false },
+  { letter: "B", path: "/version-b", ready: false },
+  { letter: "C", path: "/version-c", ready: false },
+  { letter: "D", path: "/version-d", ready: false },
+]
 
 export default function Home() {
   return (
@@ -20,16 +15,36 @@ export default function Home() {
           Local Leader &mdash; Homepage Versions
         </h1>
         <p className="text-gray-400 mt-2 text-lg">
-          Click any version to preview. Each is a complete, independent homepage
-          design.
+          All versions are live simultaneously. Click any card to preview.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+        {/* Base reference */}
+        <div className="mt-10">
+          <Link
+            href="/base"
+            className="group block rounded-lg bg-white/5 border border-amber-500/30 p-6 hover:bg-white/10 hover:border-amber-500/50"
+          >
+            <div className="flex items-center justify-between">
+              <span className="text-2xl font-bold tracking-tight">
+                Base
+              </span>
+              <span className="text-xs font-medium px-2 py-1 rounded-full bg-amber-500/20 text-amber-400">
+                Reference
+              </span>
+            </div>
+            <p className="text-sm text-gray-500 mt-3 group-hover:text-gray-400">
+              /base &mdash; Neutral reference implementation. All versions inherit from this.
+            </p>
+          </Link>
+        </div>
+
+        {/* Design versions */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
           {versions.map((v) => (
             <Link
               key={v.letter}
-              href={`/version-${v.letter.toLowerCase()}`}
-              className="group block rounded-lg bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-colors"
+              href={v.path}
+              className="group block rounded-lg bg-white/5 border border-white/10 p-6 hover:bg-white/10 hover:border-white/20"
             >
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-bold tracking-tight">
@@ -45,13 +60,13 @@ export default function Home() {
                   {v.ready ? "Ready" : "Not built yet"}
                 </span>
               </div>
-              <p className="text-sm text-gray-500 mt-3 group-hover:text-gray-400 transition-colors">
-                /version-{v.letter.toLowerCase()}
+              <p className="text-sm text-gray-500 mt-3 group-hover:text-gray-400">
+                {v.path}
               </p>
             </Link>
           ))}
         </div>
       </div>
     </div>
-  );
+  )
 }
