@@ -1,25 +1,13 @@
-import Header from "@/components-b/Header";
-import Hero from "@/components-b/Hero";
-import Pillars from "@/components-b/Pillars";
-import Results from "@/components-b/Results";
-import HowItWorks from "@/components-b/HowItWorks";
-import FAQ from "@/components-b/FAQ";
-import Contact from "@/components-b/Contact";
-import Footer from "@/components-b/Footer";
-
 export default function VersionB() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Pillars />
-        <Results />
-        <HowItWorks />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900">Version B</h1>
+        <p className="text-gray-500 mt-2">Design brief not yet applied.</p>
+        <a href="/" className="text-blue-600 hover:underline mt-4 inline-block text-sm">
+          &larr; Back to all versions
+        </a>
+      </div>
+    </div>
   );
 }
