@@ -1,0 +1,131 @@
+---
+import BtnLink from "../shared/BtnLink.astro";
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+import GradiantText from "../shared/GradiantText.astro";
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+
+const coreIncludes = [
+  "Google Maps top 3 positioning",
+  "First page of Google Search",
+  "5-star review engine",
+  "Google Business Profile management",
+  "Local citation building",
+  "Monthly reporting — plain English",
+  "Competitor gap analysis",
+  "Priority support",
+  "No ad spend required",
+  "No lock-in contracts",
+];
+
+const customCapabilities = [
+  "Brand & Design — logo, visual identity, collateral",
+  "Digital Presence — social media, email signatures",
+  "Systems & Automation — AI, workflows, IT setup",
+];
+---
+
+<section id="pricing" class=`${className}`>
+  <Container className="space-y-10">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <Title>
+        Simple, <GradiantText>transparent pricing</GradiantText>
+      </Title>
+      <p class="text-heading-3 md:text-lg">
+        One flat monthly price. No hidden extras. No ad budget on top.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <!-- Tier 1 -->
+      <div
+        class="relative flex flex-col p-8 rounded-2xl border-2 border-primary bg-box-bg shadow-lg shadow-box-shadow"
+      >
+        <div
+          class="absolute -top-3 left-8 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+        >
+          Most popular
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-heading-1">Core</h3>
+          <p class="text-heading-3 mt-1 text-sm">
+            Everything you need to dominate your local area on Google.
+          </p>
+          <div class="mt-6 flex items-end gap-1">
+            <span class="text-5xl font-bold text-heading-1">$999</span>
+            <span class="text-heading-3 mb-2">/month</span>
+          </div>
+          <p class="text-xs text-heading-3 mt-1">AUD · No lock-in · Cancel anytime</p>
+        </div>
+
+        <ul class="mt-8 flex flex-col gap-3 flex-1">
+          {
+            coreIncludes.map((item) => (
+              <li class="flex items-start gap-3 text-sm text-heading-2">
+                <span class="text-primary font-bold mt-0.5 flex-shrink-0">&checkmark;</span>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+
+        <div class="mt-8">
+          <BtnLink
+            text="Get Your Free Local Ranking Audit"
+            href="#cta"
+            variant="primary"
+            className="text-white text-center w-full"
+          />
+        </div>
+      </div>
+
+      <!-- Tier 2 -->
+      <div
+        class="flex flex-col p-8 rounded-2xl border border-box-border bg-box-bg shadow-md shadow-box-shadow"
+      >
+        <div>
+          <h3 class="text-xl font-bold text-heading-1">Custom</h3>
+          <p class="text-heading-3 mt-1 text-sm">
+            For businesses ready to take the next step.
+          </p>
+          <div class="mt-6">
+            <span class="text-2xl font-bold text-heading-1">Bespoke pricing</span>
+          </div>
+          <p class="text-xs text-heading-3 mt-1">
+            Scoped to your business — let's talk
+          </p>
+        </div>
+
+        <ul class="mt-8 flex flex-col gap-3 flex-1">
+          {
+            customCapabilities.map((item) => (
+              <li class="flex items-start gap-3 text-sm text-heading-2">
+                <span class="text-heading-3 font-bold mt-0.5 flex-shrink-0">&rarr;</span>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+
+        <p class="mt-6 text-sm text-heading-3">
+          Already getting results with the Core plan and want to go further?
+          This is for you.
+        </p>
+
+        <div class="mt-8">
+          <BtnLink
+            text="Let's talk"
+            href="mailto:hello@localleader.au"
+            variant="secondary"
+            className="text-center w-full border border-box-border hover:border-primary"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
