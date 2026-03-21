@@ -1,23 +1,22 @@
 :root {
   --color-bg: 255 255 255;
   --color-border: 255 255 255;
-  --color-box: 255 255 255;
-  --box-border: 229 231 235;
-  --box-sd: 226 232 240 / 0.5;
-  --heading-1: 23 37 84;
-  --heading-2: 31 41 55;
-  --heading-3: 55 65 81;
+  --color-box: 248 249 250;
+  --box-border: 218 220 224;
+  --box-sd: 60 64 67 / 0.15;
+  --heading-1: 32 33 36;
+  --heading-2: 60 64 67;
+  --heading-3: 95 99 104;
 }
 
 .dark {
-  --color-bg: 3 7 18;
-  --color-box: 17 24 39;
-  --box-border: 243 244 246/0.1;
-  --box-sd: transparent;
-
-  --heading-1: 255 255 255;
-  --heading-2: 243 244 246;
-  --heading-3: 209 213 219;
+  --color-bg: 255 255 255;
+  --color-box: 248 249 250;
+  --box-border: 218 220 224;
+  --box-sd: 60 64 67 / 0.15;
+  --heading-1: 32 33 36;
+  --heading-2: 60 64 67;
+  --heading-3: 95 99 104;
 }
 
 html {

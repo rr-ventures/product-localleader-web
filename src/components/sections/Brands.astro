@@ -55,7 +55,7 @@ const { className } = Astro.props;
     <div class="flex justify-center flex-wrap gap-4">
       {
         trades.map((trade) => (
-          <div class="p-5 rounded-xl border border-box-border bg-box-bg hover:bg-slate-200 dark:hover:bg-slate-800 flex flex-col items-center gap-3 min-w-[100px] transition duration-200 group">
+          <div class="p-5 rounded-xl border border-box-border bg-box-bg hover:bg-slate-100 flex flex-col items-center gap-3 min-w-[100px] transition duration-200 group">
             <span class="text-heading-3 group-hover:text-primary transition duration-200" set:html={trade.icon} />
             <span class="text-sm font-medium text-heading-2 group-hover:text-heading-1 transition duration-200">
               {trade.name}

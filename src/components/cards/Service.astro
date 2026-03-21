@@ -11,11 +11,11 @@ const { title, features, icon } = Astro.props;
 ---
 
 <div
-  class="p-5 sm:p-6 lg:p-8 relative overflow-hidden rounded-3xl shadow-md shadow-slate-700 dark:shadow-slate-900
-  bg-gradient-to-tr from-slate-100/70 to-zinc-200/60 dark:from-slate-800/10 dark:to-zinc-800/10 backdrop-blur-md hover:bg-black/10 hover:dark:bg-slate-700/10"
+  class="p-5 sm:p-6 lg:p-8 relative overflow-hidden rounded-3xl shadow-md shadow-slate-300
+  bg-gradient-to-tr from-slate-100/70 to-zinc-200/60 backdrop-blur-md hover:bg-black/5"
 >
   <div
-    class="rounded-xl p-3 text-heading-1 w-max relative bg-slate-200 dark:bg-slate-800"
+    class="rounded-xl p-3 text-heading-1 w-max relative bg-slate-200"
   >
     <slot set:html={icon} />
   </div>
@@ -31,7 +31,7 @@ const { title, features, icon } = Astro.props;
           features.map((feature) => {
             return (
               <div class="flex items-center font-medium">
-                <span class="font-bold rounded-full w-8 h-8 mr-3 inline-flex justify-center items-center text-primary dark:text-white">
+                  <span class="font-bold rounded-full w-8 h-8 mr-3 inline-flex justify-center items-center text-primary">
                   &checkmark;
                 </span>
                 {feature}
