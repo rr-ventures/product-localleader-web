@@ -4,6 +4,11 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        script: ['"Caveat"', 'cursive'],
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['"Inter"', 'sans-serif'],
+      },
       colors: {
         body: "rgb(var(--color-bg))",
         "box-bg": "rgb(var(--color-box))",
