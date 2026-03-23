@@ -28,40 +28,20 @@ const { className } = Astro.props;
     </div>
 
     <div
-      class="grid border rounded-3xl border-box-border border-box-bg bg-box-bg shadow-lg divide-y divide-slate-200 max-w-3xl mx-auto mt-8 overflow-hidden"
+      class="grid border rounded-3xl border-box-border border-box-bg bg-box-bg shadow-lg divide-y divide-slate-200 max-w-3xl mx-auto mt-12 overflow-hidden"
     >
       {
         faqs.map((faq: FAQProps) => {
           return (
-              <div class="py-5 px-5 hover:bg-slate-100">
-              <details class="group">
-                <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-heading-1">
-                  <span>{faq.question}</span>
-                  <span class="transition group-open:rotate-180 ">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shape-rendering="geometricPrecision"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6" />
-                    </svg>
-                  </span>
-                </summary>
-                <Paragraph className="mt-3 group-open:animate-fadeIn">
+            <div class="py-6 px-8 hover:bg-slate-50 transition-colors duration-200">
+              <div class="flex flex-col gap-3">
+                <h3 class="font-bold text-lg text-heading-1">
+                  {faq.question}
+                </h3>
+                <Paragraph className="text-heading-3 leading-relaxed">
                   {faq.answer}
                 </Paragraph>
-                <!-- 
-                <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
-                  {faq.answer}
-                </p>
-              -->
-              </details>
+              </div>
             </div>
           );
         })
