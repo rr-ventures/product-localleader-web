@@ -25,7 +25,9 @@ const { title } = Astro.props;
     />
     <title>{title}</title>
   </head>
-  <body class="bg-white text-slate-900 antialiased selection:bg-slate-900 selection:text-white">
+  <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white">
+    <!-- Subtle premium background pattern -->
+    <div class="fixed inset-0 z-[-2] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none"></div>
     <slot />
   </body>
 </html>
