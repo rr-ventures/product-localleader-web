@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import logoImage from "../../../public/images/local-leader-logo-clean.png";
+
+export interface Props {
+  href?: string;
+  alt?: string;
+  size?: "sm" | "md" | "lg" | "xl";
+  className?: string;
+  imageClassName?: string;
+}
+
+const {
+  href = "/",
+  alt = "Local Leader",
+  size = "md",
+  className = "",
+  imageClassName = "",
+} = Astro.props;
+
+const sizeClasses = {
+  sm: "h-9 sm:h-10",
+  md: "h-10 sm:h-11",
+  lg: "h-12 sm:h-14",
+  xl: "h-14 sm:h-16 md:h-[4.5rem]",
+}[size];
+---
+
+<a
+  href={href}
+  class:list={[
+    "group inline-flex shrink-0 items-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
+    className,
+  ]}
+>
+  <Image
+    src={logoImage}
+    alt={alt}
+    class:list={[
+      "w-auto object-contain transition duration-300 ease-out",
+      "drop-shadow-[0_10px_22px_rgba(15,23,42,0.12)] group-hover:-translate-y-0.5 group-hover:drop-shadow-[0_16px_28px_rgba(15,23,42,0.16)]",
+      sizeClasses,
+      imageClassName,
+    ]}
+  />
+</a>

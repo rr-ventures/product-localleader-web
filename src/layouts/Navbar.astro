@@ -1,10 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import Container from "../components/shared/Container.astro";
+import BrandLogo from "../components/shared/BrandLogo.astro";
 import Navitem from "../components/shared/Navitem.astro";
 import BtnLink from "../components/shared/BtnLink.astro";
-
-import logoImage from "../../public/images/v1-feedback/local-leader-logo.png";
 
 const navItems = [
   {
@@ -35,11 +33,7 @@ const navItems = [
     <nav class="w-full flex justify-between gap-6 relative">
       <!-- logo -->
       <div class="min-w-max inline-flex relative">
-        <a href="/" class="relative flex items-center gap-3">
-          <div class="relative h-8 overflow-hidden flex">
-            <Image src={logoImage} alt="Local Leader" class="h-full w-auto object-contain" />
-          </div>
-        </a>
+        <BrandLogo href="/v1" size="lg" className="relative" />
       </div>
 
       <div
