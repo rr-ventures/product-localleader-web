@@ -1,20 +1,25 @@
 ---
+import BrandLogo from "../shared/BrandLogo.astro";
+
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-slate-900 text-slate-400 py-12 px-6 md:px-12 border-t border-slate-800">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-    <div class="flex items-center gap-2">
-      <img src="/images/v3-logo.jpg" alt="Local Leader Logo" class="h-8 w-auto grayscale opacity-50" />
-    </div>
-    
-    <div class="text-sm">
+<footer class="border-t border-slate-800 bg-slate-900 px-6 py-12 text-slate-400 md:px-12">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
+    <BrandLogo
+      href="/v3"
+      size="md"
+      imageClassName="drop-shadow-none brightness-0 invert opacity-90 group-hover:translate-y-0 group-hover:drop-shadow-none"
+    />
+
+    <div class="text-center text-sm md:text-left">
       &copy; {currentYear} Local Leader. All rights reserved.
     </div>
-    
-    <div class="flex gap-6 text-sm">
-      <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-      <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+
+    <div class="flex flex-wrap justify-center gap-6 text-sm">
+      <a href="/v3#how-it-works" class="transition-colors hover:text-white">How it Works</a>
+      <a href="/v3#pricing" class="transition-colors hover:text-white">Pricing</a>
+      <a href="/v3#faq" class="transition-colors hover:text-white">FAQ</a>
     </div>
   </div>
 </footer>

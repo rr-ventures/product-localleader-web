@@ -1,22 +1,26 @@
 ---
+import BrandLogo from "../shared/BrandLogo.astro";
+
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-white border-t border-gray-200 py-12">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="flex items-center gap-2">
-        <img src="/images/v4-logo.jpg" alt="Local Leader" class="h-8 w-auto mix-blend-multiply grayscale opacity-80" />
-      </div>
-      
-      <nav class="flex gap-6 text-sm text-gray-500">
-        <a href="/v4" class="hover:text-gray-900 transition-colors">Home</a>
-        <a href="#how-it-works" class="hover:text-gray-900 transition-colors">How it Works</a>
-        <a href="#pricing" class="hover:text-gray-900 transition-colors">Pricing</a>
-        <a href="#faq" class="hover:text-gray-900 transition-colors">FAQ</a>
+<footer class="border-t border-gray-200 bg-white py-12">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+      <BrandLogo
+        href="/v4"
+        size="md"
+        imageClassName="drop-shadow-none group-hover:drop-shadow-none group-hover:translate-y-0"
+      />
+
+      <nav class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+        <a href="/v4" class="transition-colors hover:text-gray-900">Home</a>
+        <a href="/v4#how-it-works" class="transition-colors hover:text-gray-900">How it Works</a>
+        <a href="/v4#pricing" class="transition-colors hover:text-gray-900">Pricing</a>
+        <a href="/v4#faq" class="transition-colors hover:text-gray-900">FAQ</a>
       </nav>
-      
-      <div class="text-sm text-gray-400">
+
+      <div class="text-center text-sm text-gray-400 md:text-right">
         &copy; {currentYear} Local Leader. All rights reserved.
       </div>
     </div>

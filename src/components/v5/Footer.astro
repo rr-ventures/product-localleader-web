@@ -1,14 +1,24 @@
 ---
+import BrandLogo from "../shared/BrandLogo.astro";
+
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-slate-950 py-12 border-t border-slate-800">
-  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-    <div class="flex items-center gap-4">
-      <img src="/images/v5-logo.jpg" alt="Local Leader" class="h-8 grayscale brightness-200 opacity-80" />
-    </div>
-    
-    <div class="text-slate-500 text-sm">
+<footer class="border-t border-slate-800 bg-slate-950 py-12">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+    <BrandLogo
+      href="/v5"
+      size="md"
+      imageClassName="drop-shadow-none brightness-0 invert opacity-90 group-hover:translate-y-0 group-hover:drop-shadow-none"
+    />
+
+    <nav class="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
+      <a href="/v5#how-it-works" class="transition-colors hover:text-white">How it Works</a>
+      <a href="/v5#pricing" class="transition-colors hover:text-white">Pricing</a>
+      <a href="/v5#faq" class="transition-colors hover:text-white">FAQ</a>
+    </nav>
+
+    <div class="text-center text-sm text-slate-500 md:text-right">
       &copy; {currentYear} Local Leader. All rights reserved.
     </div>
   </div>
