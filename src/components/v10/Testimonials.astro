@@ -19,16 +19,32 @@ const testimonials = [
 ];
 ---
 
-<section class="py-24">
+<section class="relative overflow-hidden py-24">
+  <div class="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_20%_30%,rgba(191,219,254,0.35),transparent_32%),radial-gradient(circle_at_78%_22%,rgba(255,255,255,0.95),transparent_28%)]"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid items-start gap-16 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
-      <div class="relative order-2 lg:order-1">
-        <div class="absolute inset-x-10 bottom-7 h-10 rounded-full bg-slate-900/10 blur-2xl"></div>
-        <img
-          src="/images/v10-reviews.jpg"
-          alt="Review collection process"
-          class="relative w-full h-auto object-contain"
-        />
+    <div class="grid items-start gap-16 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+      <div class="relative order-2 lg:order-1 lg:pr-8">
+        <div class="absolute -left-8 top-16 h-36 w-36 rounded-full bg-sky-200/40 blur-[90px]"></div>
+        <div class="absolute right-8 bottom-16 h-28 w-28 rounded-full bg-white/85 blur-3xl"></div>
+        <div class="relative mx-auto max-w-[44rem] lg:-ml-6">
+          <div class="absolute inset-x-[14%] bottom-4 h-12 rounded-full bg-slate-950/12 blur-3xl"></div>
+          <div class="relative overflow-hidden rounded-[2.25rem] border border-white/75 bg-[linear-gradient(145deg,rgba(233,243,255,0.96),rgba(255,255,255,0.84))] p-5 shadow-[0_40px_100px_rgba(15,23,42,0.15),0_18px_36px_rgba(255,255,255,0.5)]">
+            <div class="pointer-events-none absolute inset-5 rounded-[1.8rem] bg-white/50 blur-2xl"></div>
+            <div class="relative overflow-hidden rounded-[1.85rem] border border-slate-200/70 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
+              <img
+                src="/images/v10-reviews.jpg"
+                alt="Review engine proof graphic showing review growth, rankings, and Google reputation gains"
+                class="relative w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <div class="absolute -right-4 top-8 hidden rounded-full border border-white/75 bg-white/95 px-4 py-2 text-sm font-medium text-slate-700 shadow-[0_18px_34px_rgba(15,23,42,0.12)] sm:flex">
+            5-star review engine
+          </div>
+          <div class="absolute -left-2 bottom-10 hidden rounded-full border border-slate-200/80 bg-[#f8fbff]/95 px-4 py-2 text-sm font-medium text-slate-700 shadow-[0_16px_30px_rgba(15,23,42,0.08)] md:flex">
+            Google review momentum
+          </div>
+        </div>
       </div>
 
       <div class="order-1 lg:order-2">
@@ -36,7 +52,7 @@ const testimonials = [
           <p class="mb-3 text-sm font-semibold uppercase tracking-[0.32em] text-slate-500">Review engine</p>
           <h2 class="mb-6 text-4xl font-serif text-slate-900">Don't just take our word for it</h2>
           <p class="mb-12 max-w-xl text-lg leading-relaxed text-slate-600">
-            The goal is simple: make your business look like the obvious choice before a prospect ever makes the call.
+            See how local service businesses are transforming their lead generation with Local Leader.
           </p>
         </div>
 
