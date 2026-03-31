@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logoImage from "../../../public/images/local-leader-logo-blue.png";
+
 export interface Props {
   href?: string;
   alt?: string;
@@ -16,55 +19,28 @@ const {
 } = Astro.props;
 
 const sizeClasses = {
-  sm: {
-    wrap: "gap-2.5",
-    icon: "h-8 w-8",
-    brand: "text-[1.85rem]",
-    suffix: "text-[1.05rem]",
-  },
-  md: {
-    wrap: "gap-3",
-    icon: "h-9 w-9",
-    brand: "text-[2rem]",
-    suffix: "text-[1.1rem]",
-  },
-  lg: {
-    wrap: "gap-3.5",
-    icon: "h-10.5 w-10.5",
-    brand: "text-[2.35rem]",
-    suffix: "text-[1.3rem]",
-  },
-  xl: {
-    wrap: "gap-4",
-    icon: "h-12 w-12",
-    brand: "text-[2.75rem]",
-    suffix: "text-[1.5rem]",
-  },
+  sm: "h-9 sm:h-10",
+  md: "h-10 sm:h-11",
+  lg: "h-12 sm:h-14",
+  xl: "h-14 sm:h-16 md:h-[4.5rem]",
 }[size];
 ---
 
 <a
   href={href}
-  aria-label={alt}
   class:list={[
     "group inline-flex shrink-0 items-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
-    sizeClasses.wrap,
     className,
   ]}
 >
-  <span
+  <Image
+    src={logoImage}
+    alt={alt}
     class:list={[
-      "flex items-center justify-center rounded-full bg-primary text-white shadow-[0_14px_28px_rgba(26,115,232,0.24)] transition duration-300 ease-out group-hover:-translate-y-0.5 group-hover:shadow-[0_18px_34px_rgba(26,115,232,0.28)]",
-      sizeClasses.icon,
+      "w-auto object-contain transition duration-300 ease-out",
+      "drop-shadow-[0_10px_22px_rgba(15,23,42,0.12)] group-hover:-translate-y-0.5 group-hover:drop-shadow-[0_16px_28px_rgba(15,23,42,0.16)]",
+      sizeClasses,
       imageClassName,
     ]}
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-[68%] w-[68%]" fill="none" stroke="currentColor" stroke-width="1.9">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c4.2-4.6 6.3-8.1 6.3-10.7A6.3 6.3 0 1 0 5.7 10.3C5.7 12.9 7.8 16.4 12 21Z" />
-      <circle cx="12" cy="10" r="2.8" fill="currentColor" stroke="none"></circle>
-    </svg>
-  </span>
-  <span class="leading-none text-primary drop-shadow-[0_8px_18px_rgba(26,115,232,0.08)]">
-    <span class:list={["font-semibold tracking-[-0.05em]", sizeClasses.brand]}>localleader</span><span class:list={["font-semibold tracking-[-0.04em] opacity-80", sizeClasses.suffix]}>.au</span>
-  </span>
+  />
 </a>
